@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
+import 'package:proyecto_base/app/config/theme/app_theme.dart';
+import 'config/router/app_router.dart';
+
+
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme(selectedThemeColor: 7).theme(),
+      routerConfig: appRouter,
+
+    );
   }
 }
